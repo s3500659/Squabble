@@ -7,8 +7,8 @@ Squabble Web App and the database.
 
 | Description  | URL |
 | ------------ | --- |
-| Squabble-Server (this project)  | https://github.com/RMIT-COSC2650-SP3-2021-Team-3/Squabble-Server  |
-| Squabble-Client                 | https://github.com/RMIT-COSC2650-SP3-2021-Team-3/Squabble-Client  |
+| Squabble-Server (this project)  | https://github.com/s3500659/Squabble/tree/master/Squabble-Server  |
+| Squabble-Client                 | https://github.com/s3500659/Squabble/tree/master/Squabble-Client  |
 | Azure Portal*                   | https://portal.azure.com |
 
 \* Azure hosts the database, the production deployments and the file/blob storage.
