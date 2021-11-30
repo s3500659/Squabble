@@ -6,8 +6,8 @@ The Squabble Web App (Client) is the frontend user interface for the Squabble Ch
 
 | Description  | URL |
 | ------------ | --- |
-| Squabble-Client (this project)  | https://github.com/RMIT-COSC2650-SP3-2021-Team-3/Squabble-Client  |
-| Squabble-Server                 | https://github.com/RMIT-COSC2650-SP3-2021-Team-3/Squabble-Server  |
+| Squabble-Client (this project)  | https://github.com/s3500659/Squabble/tree/master/Squabble-Client  |
+| Squabble-Server                 | https://github.com/s3500659/Squabble/tree/master/Squabble-Server  |
 | Azure Portal*                   | https://portal.azure.com |
 
 \* Azure hosts the database, the production deployments and the file/blob storage.
