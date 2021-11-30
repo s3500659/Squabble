@@ -1,0 +1,40 @@
+Type of database: Microsoft SQL Azure
+Version: 12.0.2000.8
+DB address: squabble-sql-server.database.windows.net
+User name: squabble-admin
+Password: WaterBottle!
+Connection string used: Server=tcp:squabble-sql-server.database.windows.net,1433;Initial Catalog=squabble;Persist Security Info=False;User ID=squabble-admin;Password=WaterBottle!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+The above connection string is already configured in `appsettings.json`.
+
+
+## Deploying the code
+
+ The code can be deployed to any number of hosts, options are Netlify, AWS, DigitalOcean, Azure and
+ more!
+
+ We chose Azure Static Web App to deploy our code and the instructions to follow our setup can be 
+ found in the Azure documentation portal
+ [here](https://docs.microsoft.com/en-us/azure/static-web-apps/get-started-portal?tabs=angular).
+
+
+### Initialise database and seed data
+
+The Squabble Server has been configured to both initialise the database if you are starting from fresh and also fill it with seed data by running the below commands:
+
+sh
+dotnet ef database update
+
+This runs all the scripts in the `/Migrations` folder to set up the database.
+
+### Azure services
+
+We rely on a number of Azure services to run the Squabble application. The guides to deploy each
+are listed here.
+
+| Description  | URL |
+| ------------ | --- |
+| SQL Server and Database | https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal |
+| Blob Storage            | https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal |
+| Communication Services  | https://docs.microsoft.com/en-us/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp |
+

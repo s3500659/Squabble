@@ -1,0 +1,18 @@
+Type of database: Microsoft SQL Azure
+Version: 12.0.2000.8
+DB address: squabble-sql-server.database.windows.net
+User name: squabble-admin
+Password: WaterBottle!
+Connection string used: Server=tcp:squabble-sql-server.database.windows.net,1433;Initial Catalog=squabble;Persist Security Info=False;User ID=squabble-admin;Password=WaterBottle!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+## Deploying the code
+
+The code can be deployed to any number of hosts, options are Netlify, AWS, DigitalOcean, Azure and
+more!
+
+We chose Azure Static Web App to deploy our code and the instructions to follow our setup can be 
+found in the Azure documentation portal
+[here](https://docs.microsoft.com/en-us/azure/static-web-apps/get-started-portal?tabs=angular).
+
+Instructions on deploying the Squabble API and related applications, such as the database and
+blob storage can be found in the `Squabble-Server` README

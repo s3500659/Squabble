@@ -1,0 +1,13 @@
+## Known Issues and Bugs
+
+
+The Login and Account database models duplicate `Email` and `Username` properties
+
+Backend contains code for middle name, but we don’t use it in our application
+
+A channel admin can remove themselves from a channel
+
+A channel can have no members, and it cannot be accessed or modified.
+
+Channels names can be duplicated and are not unique
+

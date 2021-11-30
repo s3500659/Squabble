@@ -1,0 +1,75 @@
+## Known Issues and Bugs
+
+When on a smaller screen, the images for servers break the page.
+
+No way to leave a call upon tab close
+
+Device config dropdown lists only consistently show devices in Microsoft Edge
+
+Potentially sensitive data is being logged to the console which users can see
+
+SSO Registration is rejected when Microsoft Account has no first name or surname
+
+Cannot change security questions. No option available
+
+Users cannot change their username or email address
+
+Admins can create other admins and remove access – opens the app up to abuse.
+
+Users can add themselves as friends, as well as continuously send requests to the same person. --Frontend
+
+Only the caller can add/kick participants in a group call if they are owner/admin. They should be able 
+to do it as a callee as well.
+
+If a user presses the ‘accept friend request’ button multiple times before It's processed, it sends 
+that many requests and returns errors. Probably the same for similar functions
+
+Lists for adding/kicking participants don’t update correctly when a participant disconnects/adds. 
+One example is after kicking, then adding a user, the kick list doesn’t append the added user to it
+
+After original owner hands owner status to new owner, the new owner can’t add participants to a channel, 
+but the old one still can
+
+Channels names can be duplicated and are not unique
+
+Attempts are made during call disconnect to dispose of a non-existent video stream
+
+Accepting or rejecting an incoming call notification takes too long to load local preview page
+
+Can’t delete/archive a channel
+
+A channel can have no members, and it cannot be accessed or modified.
+
+Name of team is slightly off centre
+
+A channel admin can remove themselves from a channel
+
+Shades of grey on some buttons may indicate they are inactive, eg. Kanban add items, edit items
+
+Kanban delete dialogue inconsistent with others
+
+When no item name is entered in Kanban new item, and ‘Add’ is clicked, field name disappears when error 
+is displayed
+
+Manage users dialogue contains no ‘close’ button, relying on click outside of dialogue
+
+Video not available on iPhone or Safari. Camera use is not requested. 
+
+Messages from contacts are displayed from top/oldest and user must scroll down to view newest
+
+Attachment currently displayed as non-clickable link to blob storage
+
+You can call a channel where you are the only member
+
+File uploads are immediately sent without having to click the “Send” button
+
+Channels can be created by members
+
+A user can upload a non-image file as their avatar.
+
+Sometimes after leaving a call, a user is unable to join/start a new one due to the app thinking he is 
+still in a call
+
+Sometimes the notifications displayed are inaccurate or not meant to be displayed
+
+
