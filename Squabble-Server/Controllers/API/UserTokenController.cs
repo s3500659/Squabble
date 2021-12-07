@@ -99,15 +99,11 @@ namespace Squabble.Controllers.API
                     expiresOn = response.ExpiresOn
                 };
 
-
                 var id = SupportHelpers.FindIdFromToken(HttpContext.User.Claims);
-                //Save new token in our own database
                 var user = _accountManager.GetById(id);
+                
                 user.CommunicationToken = response.Token;
-                ////TODO: add response check handling
                 _accountManager.Update(user);
-                //_accountManager.UpdateCommToken(id, response.Token);
-
 
                 return Ok(clientResponse);
             }
