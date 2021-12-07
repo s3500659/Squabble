@@ -113,15 +113,11 @@ export class ChannelsComponent implements OnInit {
 
   /** opens a dialog to get group name, then creates a new group using the name */
   createGroup() {
-    // const dialogConfig = new MatDialogConfig();
-    // dialogConfig.autoFocus = true;
-
     const dialogRef = this.dialog.open(
       CreateGroupDialogComponent,
       
       {panelClass: 'custom-dialog-container'}
     );
-    // todo: user input needs validation and sanitisation
     dialogRef.afterClosed().subscribe(async (data: any) => {
       if (data != undefined) {
         await this.createThread(data['groupName']);
