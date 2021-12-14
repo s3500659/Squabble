@@ -8,7 +8,7 @@ using Squabble.Models.Entities;
 
 namespace Squabble.Managers
 {
-    public class AccountManager : IDataRepo<User, int>
+    public class AccountManager : IDataRepo<User, int>, IAccountManager
     {
 
         private readonly SquabbleContext _context;
@@ -76,7 +76,8 @@ namespace Squabble.Managers
             {
                 await _context.Accounts.AddAsync(account);
                 await _context.SaveChangesAsync();
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 _logger.LogWarning("Error occurred with adding to database.");
                 _logger.LogWarning(e.Message);

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Squabble.Helpers;
+using Squabble.Interfaces;
 using Squabble.Managers;
 
 namespace Squabble.Controllers.API
@@ -13,10 +14,10 @@ namespace Squabble.Controllers.API
     [ApiController]
     public class UserTokenController : Controller
     {
-        private CommunicationTokenManager _acsManager { get; set; }
-        private AccountManager _accountManager { get; set; }
+        private ICommunicationTokenManager _acsManager { get; set; }
+        private IAccountManager _accountManager { get; set; }
 
-        public UserTokenController(CommunicationTokenManager acsManager, AccountManager accountManager)
+        public UserTokenController(ICommunicationTokenManager acsManager, IAccountManager accountManager)
         {
             _acsManager = acsManager;
             _accountManager = accountManager;
@@ -26,7 +27,6 @@ namespace Squabble.Controllers.API
         /// Create a User.
         /// </summary>
         /// <returns>The user id.</returns>
-        [Route("")]
         [HttpGet]
         public async Task<IActionResult> GetUserAsync()
         {
@@ -51,7 +51,6 @@ namespace Squabble.Controllers.API
         /// Create User and Generate token.
         /// </summary>
         /// <returns>The user id and token</returns>
-        [Route("")]
         [HttpGet]
         public async Task<IActionResult> GetUserAndTokenAsync()
         {
@@ -85,9 +84,8 @@ namespace Squabble.Controllers.API
         /// Refresh token for the specified user.
         /// </summary>
         /// <returns>The refreshed token.</returns>
-        [Route("{identity}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        [HttpGet]
+        [HttpGet("{identity}")]
         public async Task<IActionResult> GetRefreshTokenAsync(string identity)
         {
             try

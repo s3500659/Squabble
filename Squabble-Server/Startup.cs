@@ -58,7 +58,7 @@ namespace Squabble
                 });
             });
 
-            services.AddScoped<AccountManager>();
+            services.AddScoped<IAccountManager, AccountManager>();
             services.AddScoped<LoginManager>();
             services.AddScoped<PostManager>();
             services.AddScoped<ServerManager>();
